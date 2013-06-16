@@ -3,6 +3,26 @@ html, body
 	background-color:#254266;
 }
 
+.mainTitle
+{
+	margin:0 auto;
+	width:1252px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom:	25px;
+	color:rgb(31, 47, 68);
+	font-size:39px;
+	font-weight: bold;
+}
+
+.subTitle
+{
+	position:fixed;
+	display: inline-block;
+	right:20px;
+	bottom:20px;
+}
+
 .sublimeWindowContainer
 {
 	position:relative;

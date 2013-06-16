@@ -41,6 +41,7 @@ html, body
 	background-color:#454545;
 	border-radius:5px;
 	-webkit-box-shadow: 0px 0px 44px 2px hsl(0, 0%, 0%);
+	-moz-box-shadow: 0px 0px 44px 2px hsl(0, 0%, 0%);
 	z-index:45;
 }
 
@@ -99,6 +100,7 @@ html, body
 .code
 {
 	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
 	position:absolute;
 	background-image: url('code.png');
 	height:719px;
@@ -124,12 +126,14 @@ html, body
 	right:9px;
 	top:39px;
 	/*opacity:.5;*/
-	-webkit-transition: -webkit-box-shadow .1s linear;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: -moz-box-shadow .1s linear;
 }
 
 .scrollThumb:hover
 {
 	-webkit-box-shadow: 0px 0px 7px #000;	
+	-moz-box-shadow: 0px 0px 7px #000;	
 }
 
 .statusbarContainer
@@ -144,6 +148,7 @@ html, body
 .statusbarShadow
 {
 	background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
+	background:-moz-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
 	/*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.25, rgba(0,0,0,1)), color-stop(0.75, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));*/
 	height:7px;
 	width:100%;	
@@ -175,7 +180,8 @@ html, body
 
 .menubarShadow
 {
-	background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,0)),to(rgba(0,0,0,.2)));
+	background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
+	background:-moz-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
 	/*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.25, rgba(0,0,0,1)), color-stop(0.75, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));*/
 	height:7px;
 	width:100%;	

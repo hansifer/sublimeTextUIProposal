@@ -210,7 +210,7 @@ html, body
 	background-repeat: no-repeat;
 	background-image: url('minimap.png');
 	height:719px;
-	width:188px;
-	z-index: 62;
+	width:159px;
+	z-index: 64;
 
 }

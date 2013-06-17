@@ -144,7 +144,7 @@ html, body
 	position:absolute;
 	height:32px;
 	bottom:0px;
-	z-index: 63;
+	z-index: 65;
 	width:100%;	
 }
 
@@ -205,7 +205,7 @@ html, body
 .minimap
 {
 	position:absolute;
-	right:0px;
+	right:7px;
 	top:7px;
 	background-repeat: no-repeat;
 	background-image: url('minimap.png');

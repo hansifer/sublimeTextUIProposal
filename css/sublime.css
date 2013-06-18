@@ -13,14 +13,7 @@ html, body
 	color:rgb(31, 47, 68);
 	font-size:39px;
 	font-weight: bold;
-}
-
-.subTitle
-{
-	position:fixed;
-	display: inline-block;
-	right:20px;
-	bottom:20px;
+	margin-top:20px;
 }
 
 .sublimeWindowContainer
@@ -122,6 +115,10 @@ html, body
 
 .scrollThumb
 {
+	background-color: #393939;
+	width:15px;
+	height:90px;
+	border-radius: 2px;
 	position:absolute;
 	z-index: 63;
 	right:9px;
@@ -210,5 +207,4 @@ html, body
 	height:719px;
 	width:159px;
 	z-index: 64;
-
 }

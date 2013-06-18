@@ -6,10 +6,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Sublime Text UI Proposal</title>
+        <meta name="description" content="Sublime Text UI Proposal">
         <meta name="viewport" content="width=device-width">
-   		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/sublime.css">
@@ -19,59 +19,48 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-		<div style="margin-top:20px;">
-		<div class="mainTitle">
-			Sublime Text UI Proposal
-		</div>
-		<div class="subTitle">
-			<a style="color:hsl(185, 10%, 54%);font-size:18px;" href="https://github.com/hansifer/sublimeTextUIProposal" target="_blank">hansifer/sublimeTextUIProposal · GitHub</a>
-		</div>
-		<div class="sublimeWindowContainer">
-			<div class="sublimeWindowOverlay">
+		<div>
+			<div class="mainTitle">
+				Sublime Text UI Proposal
 			</div>
-			<div class="sublimeWindow">
-				<div class="tabstrip">
-						<img src="img/tabstrip.png"/>
-				</div>
-				<div class="windowcontrol">
-					<img src="img/windowcontrol.png"/>
-				</div>
-			</div>
-			<div class="tabselected">
-				<img src="img/tabselected.png"/>
-			</div>
-			<div class="contentArea">
-				<div id="code" class="code">
-				</div>
-				<div id="scrollThumb" class="scrollThumb">
-					<img src="img/scrollThumb.png"/>
-				</div>
-				<div id="statusbar" class="statusbarContainer barHidden">
-					<div id="statusbarShadow" class="statusbarShadow" style="-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0))); -moz-mask-box-image: -moz-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));">
+			<div class="sublimeWindowContainer">
+				<div class="sublimeWindowOverlay"></div>
+				<div class="sublimeWindow">
+					<div class="tabstrip">
+							<img src="img/tabstrip.png"/>
 					</div>
-					<div class="statusbar">
+					<div class="windowcontrol">
+						<img src="img/windowcontrol.png"/>
 					</div>
 				</div>
-				<div id="menubar" class="menubarContainer barHidden">
-					<div id="menubarText" class="menubar">
-
-					</div>
-					<div id="menubarShadow" class="menubarShadow" style="-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));  -moz-mask-box-image: -moz-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));">
-					</div>
+				<div class="tabselected">
+					<img src="img/tabselected.png"/>
 				</div>
-				<div id="minimap">
+				<div class="contentArea">
+					<div id="code" class="code"></div>
+					<div id="scrollThumb" class="scrollThumb"></div>
+					<div id="statusbar" class="statusbarContainer barHidden">
+						<div id="statusbarShadow" class="statusbarShadow" style="-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0))); -moz-mask-box-image: -moz-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));">
+						</div>
+						<div class="statusbar"></div>
+					</div>
+					<div id="menubar" class="menubarContainer barHidden">
+						<div id="menubarText" class="menubar"></div>
+						<div id="menubarShadow" class="menubarShadow" style="-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));  -moz-mask-box-image: -moz-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.04, rgba(0,0,0,1)), color-stop(0.96, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));">
+						</div>
+					</div>
+					<div id="minimap"></div>
 				</div>
 			</div>
-		</div>
 		</div>
 		<div style="margin:0 auto;width:1252px;margin-top:15px;">
-			<button id="btnSidebar" type="button" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Side Bar</button>
+			<button id="btnSidebar" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Side Bar</button>
 			<div class="btn-group" data-toggle="buttons-checkbox">
-			<button id="btnMenubar" type="button" class="btn btn-small btn-inverse">Menu</button><button id="btnFilepath" type="button" class="btn btn-small btn-inverse" style="margin-right:10px;">File Path</button>
+			<button id="btnMenubar" class="btn btn-small btn-inverse">Menu</button><button id="btnFilepath" class="btn btn-small btn-inverse" style="margin-right:10px;">File Path</button>
 			</div>
-			<button id="btnStatusbar" type="button" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Status Bar</button>
-			<button id="btnMinimap" type="button" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Minimap</button>
+			<button id="btnStatusbar" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Status Bar</button>
+			<button id="btnMinimap" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Minimap</button>
+			<div style="float:right;opacity:.3;color:white;font-size:18px;"><a style="color:inherit;margin-right:25px;" href="https://github.com/hansifer/sublimeTextUIProposal" target="_blank">hansifer/sublimeTextUIProposal · GitHub</a>June 2013</div>
 		</div>
         
         <script>
@@ -83,7 +72,7 @@
         </script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-    	<script src="./bootstrap/js/bootstrap.min.js"></script>
+    	<script src="js/bootstrap.js"></script>
 
         <script>
         	if (!window.location || window.location.protocol != 'file:') {

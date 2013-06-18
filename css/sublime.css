@@ -32,10 +32,10 @@ html, body
 	height:inherit;
 	margin:0 auto;
 	background-color:#454545;
-	border-radius:5px;
-	-webkit-box-shadow: 0px 0px 44px 2px hsl(0, 0%, 0%);
-	-moz-box-shadow: 0px 0px 44px 2px hsl(0, 0%, 0%);
-	box-shadow: 0px 0px 44px 2px hsl(0, 0%, 0%);
+	border-radius:7px;
+	-webkit-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
+	-moz-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
+	box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
 	z-index:45;
 }
 
@@ -47,7 +47,7 @@ html, body
 	margin:0 auto;
 	background-color:hsl(221, 100%, 33%);
 	background-color: hsl(0, 0%, 13%);
-	border-radius:5px;
+	border-radius:7px;
 	opacity:.3;
 	z-index:46;
 }
@@ -77,17 +77,26 @@ html, body
 	z-index:60;
 }
 
-.contentArea
+.contentFrame
 {
 	top:37px;
 	position:absolute;
 	background-color:#272822;
-	background-color:#272822;
 	width: 100%;
 	height:734px;
-	z-index: 61;
-	border-bottom-right-radius:5px;
-	border-bottom-left-radius:5px;
+	z-index: 61;	
+	border-bottom-right-radius:7px;
+	border-bottom-left-radius:7px;
+}
+
+.contentArea
+{
+	margin:9px;
+	position:absolute;
+	background-color: #393939;
+	width: 190px;
+	height:716px;
+	z-index: 62;
 }
 
 .code
@@ -97,11 +106,9 @@ html, body
 	transition: background-position .1s linear;
 	position:absolute;
 	background-image: url('code.png');
-	height:719px;
-	width:1237px;
-	left:7px;
-	top:7px;
-	z-index: 62;
+	height:716px;
+	width:1234px;
+	z-index: 63;
 
 	background-image: url('code.png');
 	background-repeat: no-repeat;
@@ -120,7 +127,7 @@ html, body
 	height:90px;
 	border-radius: 2px;
 	position:absolute;
-	z-index: 63;
+	z-index: 64;
 	right:9px;
 	top:39px;
 	/*opacity:.5;*/
@@ -131,9 +138,9 @@ html, body
 
 .scrollThumb:hover
 {
-	-webkit-box-shadow: 0px 0px 6px #000;	
-	-moz-box-shadow: 0px 0px 6px #000;	
-	box-shadow: 0px 0px 6px #000;	
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,.5);	
+	-moz-box-shadow: 0px 0px 8px rgba(0,0,0,.5);	
+	box-shadow: 0px 0px 8px rgba(0,0,0,.5);	
 }
 
 .statusbarContainer
@@ -141,7 +148,7 @@ html, body
 	position:absolute;
 	height:32px;
 	bottom:0px;
-	z-index: 65;
+	z-index: 66;
 	width:100%;	
 }
 
@@ -156,8 +163,8 @@ html, body
 
 .statusbar
 {
-	border-bottom-right-radius:5px;
-	border-bottom-left-radius:5px;
+	border-bottom-right-radius:7px;
+	border-bottom-left-radius:7px;
 	background-image: url('statusbar.png');
 	height:25px;
 	width:100%;
@@ -174,7 +181,7 @@ html, body
 	position:absolute;
 	height:32px;
 	top:0px;
-	z-index: 63;
+	z-index: 64;
 	width:100%;	
 }
 
@@ -200,11 +207,23 @@ html, body
 .minimap
 {
 	position:absolute;
-	right:7px;
-	top:7px;
+	right:9px;
+	top:9px;
 	background-repeat: no-repeat;
 	background-image: url('minimap.png');
-	height:719px;
+	height:716px;
 	width:159px;
-	z-index: 64;
+	z-index: 65;
+}
+
+.swatch
+{
+	border: 1px solid hsl(213, 37%, 55%);
+	line-height: 20px;
+	margin: 0px 4px;
+	vertical-align: middle;
+	display: inline-block;
+	height:20px;
+	width:20px;
+	background-color:black;
 }

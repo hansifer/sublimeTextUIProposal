@@ -1,3 +1,18 @@
+
+@media (max-width: 1400px) {
+	body {
+		zoom: 75%;
+		-moz-transform: scale(.75);
+	}
+}
+
+@media (max-width: 1020px) {
+	body {
+		zoom: 50%;
+		-moz-transform: scale(.50);
+	}
+}
+
 html, body
 {
 	background-color:#254266;

@@ -19,7 +19,7 @@
 		}
 	}
 
-	function showMenu(e) { 
+	function showMenu(e) {
 		if (!menuShown) {
 			$('#menubar').removeClass('barHidden');
 			$('#code').css('top', '19px');

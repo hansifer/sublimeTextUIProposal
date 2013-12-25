@@ -47,7 +47,7 @@ html, body
 	height:inherit;
 	margin:0 auto;
 	background-color:#454545;
-	border-radius:7px;
+	border-radius:4px;
 	-webkit-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
 	-moz-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
 	box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
@@ -62,7 +62,7 @@ html, body
 	margin:0 auto;
 	background-color:hsl(221, 100%, 33%);
 	background-color: hsl(0, 0%, 13%);
-	border-radius:7px;
+	border-radius:4px;
 	opacity:.3;
 	z-index:46;
 	-webkit-transition: background-color .3s linear;
@@ -103,21 +103,22 @@ html, body
 	width: 100%;
 	height:734px;
 	z-index: 61;	
-	border-bottom-right-radius:7px;
-	border-bottom-left-radius:7px;
+	border-bottom-right-radius:4px;
+	border-bottom-left-radius:4px;
 }
 
 .contentArea
 {
-	margin:9px;
+	margin:7px 0px 0px;
 	position:absolute;
 	background-color: #393939;
-	width: 190px;
-	height:716px;
+	width: 182px;
+	height:726px;
 	z-index: 62;
 	-webkit-transition: background-color .3s linear;
 	-moz-transition: background-color .3s linear;
 	transition: background-color .3s linear;
+	border-bottom-left-radius: 4px;
 }
 
 .code
@@ -127,9 +128,10 @@ html, body
 	transition: background-position .1s linear;
 	position:absolute;
 	background-image: url('code.png');
-	height:716px;
+	height:726px;
 	width:1234px;
 	z-index: 63;
+	border-bottom-left-radius: 4px;
 
 	background-image: url('code.png');
 	background-repeat: no-repeat;
@@ -184,8 +186,8 @@ html, body
 
 .statusbar
 {
-	border-bottom-right-radius:7px;
-	border-bottom-left-radius:7px;
+	border-bottom-right-radius:4px;
+	border-bottom-left-radius:4px;
 	background-image: url('statusbar.png');
 	height:25px;
 	width:100%;

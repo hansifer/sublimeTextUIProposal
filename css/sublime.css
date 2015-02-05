@@ -14,7 +14,8 @@
 
 html, body
 {
-	background-color:#254266;
+	xbackground-color:#254266;
+	background-color:#3F6FAB;
 }
 
 .mainTitle
@@ -24,10 +25,13 @@ html, body
 	text-align: center;
 	vertical-align: middle;
 	margin-bottom:	25px;
-	color:rgb(112, 141, 179);
+	xcolor:rgb(112, 141, 179);
+	color:hsl(0,100%,100%);
 	font-size:39px;
 	font-weight: bold;
 	margin-top:20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
 }
 
 .sublimeWindowContainer
@@ -45,12 +49,14 @@ html, body
 	width:inherit;
 	height:inherit;
 	margin:0 auto;
-	background-color:#454545;
-	border-radius:4px;
-	-webkit-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
-	-moz-box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
-	box-shadow: 0px 0px 57px 2px hsla(0, 0%, 0%, .8);
+	background-color:hsl(0, 0%, 40%);
+	xborder-radius:4px;
+	-moz-box-shadow: 0px 0px 57px 2px hsl(213, 46%, 30%);
+	box-shadow: 0px 0px 57px 2px hsl(213, 46%, 30%);
 	z-index:45;
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	transition: background-color .3s linear;
 }
 
 .sublimeWindowOverlay
@@ -61,8 +67,8 @@ html, body
 	margin:0 auto;
 	background-color:hsl(221, 100%, 33%);
 	background-color: hsl(0, 0%, 13%);
-	border-radius:4px;
-	opacity:.3;
+	xborder-radius:4px;
+	xopacity:.3;
 	z-index:46;
 	-webkit-transition: background-color .3s linear;
 	-moz-transition: background-color .3s linear;
@@ -72,16 +78,19 @@ html, body
 .tabstrip
 {
 	position:absolute;
-	top:7px;
 	opacity:1;
 	z-index:46;
+	top: 0px;
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	transition: background-color .3s linear;
 }
 
 .tabselected
 {
 	position:absolute;
-	top:6px;
-	left:332px;
+	left:289px;
+	top: 0px;
 	z-index:60;
 }
 
@@ -90,7 +99,7 @@ html, body
 	position:absolute;
 	top:4px;
 	right:-5px;
-	opacity: .4;
+	opacity: .8;
 	z-index:60;
 }
 
@@ -102,22 +111,22 @@ html, body
 	width: 100%;
 	height:734px;
 	z-index: 61;	
-	border-bottom-right-radius:4px;
-	border-bottom-left-radius:4px;
+	xborder-bottom-right-radius:4px;
+	xborder-bottom-left-radius:4px;
 }
 
 .contentArea
 {
-	margin:7px 0px 0px;
+	margin:8px 0px 0px;
 	position:absolute;
-	background-color: #393939;
+	background-color: hsl(0, 0%, 40%);
 	width: 182px;
 	height:726px;
 	z-index: 62;
 	-webkit-transition: background-color .3s linear;
 	-moz-transition: background-color .3s linear;
 	transition: background-color .3s linear;
-	border-bottom-left-radius: 4px;
+	xborder-bottom-left-radius: 4px;
 }
 
 .code
@@ -130,7 +139,7 @@ html, body
 	height:726px;
 	width:1234px;
 	z-index: 63;
-	border-bottom-left-radius: 4px;
+	xborder-bottom-left-radius: 4px;
 
 	background-image: url('code.png');
 	background-repeat: no-repeat;
@@ -147,7 +156,7 @@ html, body
 	background-color: #393939;
 	width:15px;
 	height:90px;
-	border-radius: 2px;
+	xborder-radius: 2px;
 	position:absolute;
 	z-index: 64;
 	right:9px;
@@ -168,7 +177,7 @@ html, body
 .statusbarContainer
 {
 	position:absolute;
-	height:32px;
+	height:39px;
 	bottom:0px;
 	z-index: 66;
 	width:100%;	
@@ -176,8 +185,8 @@ html, body
 
 .statusbarShadow
 {
-	background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
-	background:linear-gradient(0deg,rgba(0,0,0,.2), rgba(0,0,0,0));
+	background:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.4)),to(rgba(0,0,0,0)));
+	background:linear-gradient(0deg,rgba(0,0,0,.4), rgba(0,0,0,0));
 	/*-webkit-mask-box-image: -webkit-gradient(linear, left top, right top, color-stop(0.0, rgba(0,0,0,0)), color-stop(0.25, rgba(0,0,0,1)), color-stop(0.75, rgba(0,0,0,1)), color-stop(1.0, rgba(0,0,0,0)));*/
 	height:7px;
 	width:100%;	
@@ -185,10 +194,10 @@ html, body
 
 .statusbar
 {
-	border-bottom-right-radius:4px;
-	border-bottom-left-radius:4px;
+	xborder-bottom-right-radius:4px;
+	xborder-bottom-left-radius:4px;
 	background-image: url('statusbar.png');
-	height:25px;
+	height:32px;
 	width:100%;
 }
 
@@ -240,12 +249,23 @@ html, body
 
 .swatch
 {
-	border: 1px solid hsl(213, 37%, 55%);
-	line-height: 20px;
+	border: 1px solid hsl(213, 46%, 66%);
 	margin: 0px 4px;
 	vertical-align: middle;
 	display: inline-block;
-	height:20px;
-	width:20px;
+	height: 58px;
+  	width: 58px;
 	background-color:black;
+	xborder-radius: 3px;
+}
+
+.btn-inverse {
+  font-size: 20px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 100;
+  line-height: 0px;
+  padding: 28px 43px;
+  background: hsl(213, 46%, 46%);
+  border: 1px solid hsl(213, 46%, 66%);
+  color: hsl(213, 46%, 91%);
 }

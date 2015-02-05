@@ -112,80 +112,66 @@
 
 	var themeColorPerm = 4;
 	var themeColors = [
-		['#423030', 'rgb(63, 0, 0)'],
-		['#454530', 'rgb(73, 70, 0)'],
-		['#304634', 'rgb(0, 75, 15)'],
-		['#303e56', 'hsl(219,94%, 26%)'],
-		['#393939', 'hsl(0, 0%, 13%)'],
+		['hsl(29, 46%, 25%)', 'hsl(29, 46%, 25%)'],
+		['hsl(60, 49%, 18%)', 'hsl(60, 49%, 18%)'],
+		['hsl(84, 33%, 26%)', 'hsl(84, 33%, 26%)'],
+		['hsl(213, 46%, 42%)', 'hsl(213, 46%, 42%)'],
+		['hsl(0, 0%, 36%)', 'hsl(0, 0%, 36%)'],
 		/*['#483842', 'hsl(322,48%,22%)'],*/
 	];
 
-	$('#swatch1').on('click mouseover mouseout', function(e) {
-		if (e.type == 'mouseout') {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[themeColorPerm][1]);
-			$('.contentArea').css('background-color', themeColors[themeColorPerm][0]);
-		} else {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[0][1]);
-			$('.contentArea').css('background-color', themeColors[0][0]);
-
-			if (e.type == 'click') {
-				themeColorPerm = 0;
-			}
-		}
+	$('.tabselected').on('mouseover',function() {
+		$(this).append('<img id="x" src="img/x.png" style="position:absolute;top:16px;left:124px;">');
 	});
 
-	$('#swatch2').on('click mouseover mouseout', function(e) {
-		if (e.type == 'mouseout') {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[themeColorPerm][1]);
-			$('.contentArea').css('background-color', themeColors[themeColorPerm][0]);
-		} else {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[1][1]);
-			$('.contentArea').css('background-color', themeColors[1][0]);
-
-			if (e.type == 'click') {
-				themeColorPerm = 1;
-			}
-		}
+	$('.tabselected').on('mouseout',function() {
+		$('#x').remove();
 	});
 
-	$('#swatch3').on('click mouseover mouseout', function(e) {
-		if (e.type == 'mouseout') {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[themeColorPerm][1]);
-			$('.contentArea').css('background-color', themeColors[themeColorPerm][0]);
-		} else {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[2][1]);
-			$('.contentArea').css('background-color', themeColors[2][0]);
-
-			if (e.type == 'click') {
-				themeColorPerm = 2;
-			}
-		}
+	$('#tab1, #tab2, #tab3').on('mouseover',function() {
+		$(this).css('background-color','hsla(0,0%,0%,.16)');
+		$(this).css('background-image','url(img/x.png)');
+		$(this).css('background-repeat','no-repeat');
+		$(this).css('background-position','124px 16px');
 	});
 
-	$('#swatch4').on('click mouseover mouseout', function(e) {
-		if (e.type == 'mouseout') {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[themeColorPerm][1]);
-			$('.contentArea').css('background-color', themeColors[themeColorPerm][0]);
-		} else {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[3][1]);
-			$('.contentArea').css('background-color', themeColors[3][0]);
-
-			if (e.type == 'click') {
-				themeColorPerm = 3;
-			}
-		}
+	$('#tab1, #tab2, #tab3').on('mouseout',function() {
+		$(this).css('background-color','');
+		$(this).css('background-image','');
+		$(this).css('background-repeat','');
+		$(this).css('background-position','');
 	});
 
-	$('#swatch5').on('click mouseover mouseout', function(e) {
+	$('#swatch1, #swatch2, #swatch3, #swatch4, #swatch5').on('click mouseover mouseout', function(e) {
+		var colorPerm;
+
+		switch (this.id) {
+			case 'swatch1':
+				colorPerm = 0;
+				break;
+			case 'swatch2':
+				colorPerm = 1;
+				break;
+			case 'swatch3':
+				colorPerm = 2;
+				break;
+			case 'swatch4':
+				colorPerm = 3;
+				break;
+			case 'swatch5':
+				colorPerm = 4;
+				break;
+		}
+
 		if (e.type == 'mouseout') {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[themeColorPerm][1]);
-			$('.contentArea').css('background-color', themeColors[themeColorPerm][0]);
+			$('.tabstrip').css('background-color', themeColors[themeColorPerm][0]);
+			$('.contentArea, .sublimeWindow').css('background-color', themeColors[themeColorPerm][0]);
 		} else {
-			$('.sublimeWindowOverlay').css('background-color', themeColors[4][1]);
-			$('.contentArea').css('background-color', themeColors[4][0]);
+			$('.tabstrip').css('background-color', themeColors[colorPerm][0]);
+			$('.contentArea, .sublimeWindow').css('background-color', themeColors[colorPerm][0]);
 
 			if (e.type == 'click') {
-				themeColorPerm = 4;
+				themeColorPerm = colorPerm;
 			}
 		}
 	});

@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/sublime.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300,100' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -24,17 +25,19 @@
 				Sublime Text UI Proposal
 			</div>
 			<div class="sublimeWindowContainer">
-				<div class="sublimeWindowOverlay"></div>
 				<div class="sublimeWindow">
 					<div class="tabstrip">
+						<div id="tab1" style="position:absolute;z-index:5000;display:inline-block;width: 145px;top: 0;left: 0;height: 56px;"></div>
+						<div id="tab2" style="position:absolute;z-index:5000;display:inline-block;width: 145px;top: 0;left: 145px;height: 56px;"></div>
+						<div id="tab3" style="position:absolute;z-index:5000;display:inline-block;width: 145px;top: 0;left: 433px;height: 56px;"></div>
 							<img src="img/tabstrip.png"/>
 					</div>
 					<div class="windowcontrol">
-						<img src="img/windowcontrol.png"/>
+						<img src="img/windowcontrol.png" />
 					</div>
 				</div>
-				<div class="tabselected">
-					<img src="img/tabselected.png"/>
+				<div class="tabselected" style="position:relative;">
+					<img src="img/tabselected.png" style="position:absolute;"/>
 				</div>
 				<div class="contentFrame">
 					<div id="scrollThumb" class="scrollThumb"></div>
@@ -56,6 +59,7 @@
 			</div>
 		</div>
 		<div style="margin:0 auto;width:1252px;margin-top:31px;">
+		<div style="text-align:center;">
 			<button id="btnSidebar" data-toggle="button" class="btn btn-small btn-inverse" style="margin-right:10px;">Side Bar</button>
 			<div class="btn-group" data-toggle="buttons-checkbox">
 			<button id="btnMenubar" class="btn btn-small btn-inverse">Menu</button><button id="btnFilepath" class="btn btn-small btn-inverse" style="margin-right:10px;">File Path</button>
@@ -67,7 +71,8 @@
 			<div id="swatch3" class="swatch"></div>
 			<div id="swatch4" class="swatch"></div>
 			<div id="swatch5" class="swatch"></div>
-			<div style="float:right;opacity:.3;color:white;font-size:18px;"><a style="color:inherit;margin-right:25px;" href="https://github.com/hansifer/sublimeTextUIProposal" target="_blank">hansifer/sublimeTextUIProposal · GitHub</a>June 2013</div>
+			<div style="padding-top:30px;opacity:0.8;color:white;font-size:20px;"><a style="font-family:'Roboto',sans-serif;font-weight:100;color:inherit;margin-right:25px;" href="https://github.com/hansifer/sublimeTextUIProposal" target="_blank">hansifer/sublimeTextUIProposal · GitHub</a><!--June 2013--></div>
+		</div>
 		</div>
         
         <script>

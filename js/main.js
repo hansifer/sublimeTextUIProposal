@@ -23,7 +23,7 @@
 		if (!menuShown) {
 			$('#menubar').removeClass('barHidden');
 			$('#code').css('top', '19px');
-			$('#code').css('height', '708px');
+			$('#code').css('height', '707px');
 			$('#minimap').css('top', '35px');
 			$('#minimap').css('height', '691px');
 			$('#scrollThumb').css('top', '67px');
@@ -57,7 +57,7 @@
 		if (!filepathShown) {
 			$('#menubar').removeClass('barHidden');
 			$('#code').css('top', '19px');
-			$('#code').css('height', '708px');
+			$('#code').css('height', '707px');
 			$('#minimap').css('height', '691px');
 			$('#minimap').css('top', '35px');
 			$('#scrollThumb').css('top', '67px');

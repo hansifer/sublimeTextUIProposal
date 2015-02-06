@@ -121,7 +121,7 @@
 	];
 
 	$('.tabselected').on('mouseover',function() {
-		$(this).append('<img id="x" src="img/x.png" style="position:absolute;top:16px;left:124px;">');
+		$(this).append('<img id="x" src="img/x.PNG" style="position:absolute;top:16px;left:124px;">');
 	});
 
 	$('.tabselected').on('mouseout',function() {
@@ -130,7 +130,7 @@
 
 	$('#tab1, #tab2, #tab3').on('mouseover',function() {
 		$(this).css('background-color','hsla(0,0%,0%,.16)');
-		$(this).css('background-image','url(img/x.png)');
+		$(this).css('background-image','url(img/x.PNG)');
 		$(this).css('background-repeat','no-repeat');
 		$(this).css('background-position','124px 16px');
 	});
